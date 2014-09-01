@@ -1,3 +1,0 @@
-class MainViewController < UIViewController
-  
-end

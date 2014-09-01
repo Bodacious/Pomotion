@@ -1,1 +1,36 @@
-/**/
+#main_view {
+  background-color: white;
+}
+
+#timer_label {
+  top: 160px;
+  left: 60px;
+  width: 200px;
+  height: 60px;
+  font-size: 60px;
+  text-align: center;
+}
+#timer_button {
+  top: 230px;
+  left: 60px;
+  width: 200px;
+  height: 40px;
+  color: white;
+  background-color: #007F00;
+}
+#task_header_label {
+  top: 375px;
+  left: 60px;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  color: #AAAAAA;
+}
+#task_name_label {
+  top: 400px;
+  left: 60px;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  color: #333333;
+}

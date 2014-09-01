@@ -6,7 +6,7 @@ class AppDelegate
   end
   
   def main_controller
-    @main_controller ||= UIViewController.alloc.initWithNibName(nil, bundle: nil)
+    @main_controller ||= MainViewController.alloc.initWithNibName(nil, bundle: nil)
   end
   
   def window
