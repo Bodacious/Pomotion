@@ -34,3 +34,11 @@
   font-size: 20px;
   color: #333333;
 }
+
+navigation-bar {
+  background-color: #7F0000;
+}
+
+navigation-bar title {
+  color: white;
+}
