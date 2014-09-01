@@ -21,6 +21,7 @@ class MainView < UIView
     @timer_label ||= UILabel.alloc.initWithFrame(CGRectZero).tap do |label|
       label.styleId   = 'timer_label'
       label.text      = '00:00'
+      label.textColor = UIColor.pomo_grey_color
     end
   end
   

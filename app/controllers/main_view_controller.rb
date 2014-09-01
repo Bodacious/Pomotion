@@ -34,25 +34,31 @@ class MainViewController < UIViewController
   # =========================  
   
   def pomodoro_timer_did_start(pomodoro_timer)
-    NSLog("pomodoro_timer_did_start")
+    update_timer_label
   end
     
   def pomodoro_timer_did_invalidate(pomodoro_timer)
+    update_timer_label
     NSLog("pomodoro_timer_did_invalidate")
   end
   
   def pomodoro_timer_did_decrement(pomodoro_timer)
-    timer_label.text = TimerTextValue.new(pomodoro_timer.count).to_s
+    update_timer_label
   end
 
   def pomodoro_timer_did_finish(pomodoro_timer)
-    NSLog("pomodoro_timer_did_finish")    
+    pomodoro_timer.invalidate
   end
   
   
   private
   
     
+  def update_timer_label
+    timer_label.textColor = TimerColor.new(pomodoro_timer.count).color
+    timer_label.text      = TimerTextValue.new(pomodoro_timer.count).to_s
+  end
+  
   def start_new_pomodoro_timer
     self.pomodoro_timer = PomodoroTimer.new
     pomodoro_timer.delegate = self
