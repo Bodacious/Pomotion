@@ -4,8 +4,15 @@ class MainViewController < UIViewController
   
   
   def loadView
-    self.title = "Pomotion"
     self.view = MainView.alloc.initWithFrame(CGRectZero)
+  end
+  
+  def viewDidLoad
+    super
+    self.title = "Pomotion"
+    Pomodoro.today.each do |pomodoro|
+      view.add_pomodoro_view if pomodoro.complete?
+    end
   end
   
   # ==============
@@ -15,16 +22,17 @@ class MainViewController < UIViewController
   def timer_label
     view.timer_label
   end
-  
-  
+    
   # ===========
   # = Actions =
   # ===========
   
   def timer_button_tapped(sender)
     if pomodoro_timer && pomodoro_timer.valid?
+      Pomodoro.finish_current_and_reset
       pomodoro_timer.invalidate      
     else
+      create_new_pomodoro
       start_new_pomodoro_timer
     end
   end
@@ -47,13 +55,20 @@ class MainViewController < UIViewController
   end
 
   def pomodoro_timer_did_finish(pomodoro_timer)
+    view.add_pomodoro_view
     pomodoro_timer.invalidate
+    Pomodoro.finish_current_and_reset
   end
   
   
   private
   
-    
+  
+  def create_new_pomodoro
+    Pomodoro.current = Pomodoro.create(started_at: Time.now)
+    cdq.save
+  end
+  
   def update_timer_label
     timer_label.textColor = TimerColor.new(pomodoro_timer.count).color
     timer_label.text      = TimerTextValue.new(pomodoro_timer.count).to_s

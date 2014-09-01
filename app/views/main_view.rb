@@ -16,7 +16,10 @@ class MainView < UIView
     end
   end
   
-  # Properties
+  # ==============
+  # = Properties =
+  # ==============
+  
   def timer_label
     @timer_label ||= UILabel.alloc.initWithFrame(CGRectZero).tap do |label|
       label.styleId   = 'timer_label'
@@ -46,6 +49,18 @@ class MainView < UIView
     @task_name_label ||= UILabel.alloc.initWithFrame(CGRectZero).tap do |label|
       label.styleId = 'task_name_label'
       label.text = TASK_NAME_LABEL_DEFAULT_TEXT
+    end
+  end
+  
+  # ===========
+  # = Actions =
+  # ===========
+  
+  def add_pomodoro_view(count = 1)
+    NSLog("Adding #{count} PomodoroViews")
+    count.times do 
+      pomodoro_view = PomodoroView.alloc.initWithFrame(CGRectZero)
+      addSubview(pomodoro_view)
     end
   end
   

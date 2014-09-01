@@ -42,3 +42,72 @@ navigation-bar {
 navigation-bar title {
   color: white;
 }
+.pomodoro_view {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+.pomodoro_view:nth-of-type(1) {
+  top: 290px;
+  left: 60px;
+}
+.pomodoro_view:nth-of-type(2) {
+  top: 290px;
+  left: 85px;
+}
+.pomodoro_view:nth-of-type(3) {
+  top: 290px;
+  left: 110px;
+}
+.pomodoro_view:nth-of-type(4) {
+  top: 290px;
+  left: 135px;
+}
+.pomodoro_view:nth-of-type(5) {
+  top: 290px;
+  left: 160px;
+}
+.pomodoro_view:nth-of-type(6) {
+  top: 290px;
+  left: 185px;
+}
+.pomodoro_view:nth-of-type(7) {
+  top: 290px;
+  left: 210px;
+}
+.pomodoro_view:nth-of-type(8) {
+  top: 290px;
+  left: 235px;
+}
+.pomodoro_view:nth-of-type(9) {
+  top: 315px;
+  left: 60px;
+}
+.pomodoro_view:nth-of-type(10) {
+  top: 315px;
+  left: 85px;
+}
+.pomodoro_view:nth-of-type(11) {
+  top: 315px;
+  left: 110px;
+}
+.pomodoro_view:nth-of-type(12) {
+  top: 315px;
+  left: 135px;
+}
+.pomodoro_view:nth-of-type(13) {
+  top: 315px;
+  left: 160px;
+}
+.pomodoro_view:nth-of-type(14) {
+  top: 315px;
+  left: 185px;
+}
+.pomodoro_view:nth-of-type(15) {
+  top: 315px;
+  left: 210px;
+}
+.pomodoro_view:nth-of-type(16) {
+  top: 315px;
+  left: 235px;
+} 
