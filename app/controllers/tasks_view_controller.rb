@@ -8,6 +8,24 @@ class TasksViewController < UITableViewController
     super
     self.title = "Tasks"
     tableView.registerClass(EmptyCell, forCellReuseIdentifier: EmptyCell.name)
+    navigationItem.rightBarButtonItem = add_button
+  end
+  
+  # ==============
+  # = Properties =
+  # ==============
+  
+  def add_button
+    @add_button ||= UIBarButtonItem.alloc.
+      initWithBarButtonSystemItem(UIBarButtonSystemItemAdd, target: self, 
+      action: 'add_button_tapped:')
+  end
+  
+  # ===========
+  # = Actions =
+  # ===========
+  
+  def add_button_tapped(sender)
   end
   
   # =======================
