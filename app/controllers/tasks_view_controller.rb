@@ -69,6 +69,23 @@ class TasksViewController < UITableViewController
     navigationController.popViewControllerAnimated(true)
   end
   
+  def tableView(table_view, canEditRowAtIndexPath: index_path)
+    true
+  end  
+  
+  def tableView(table_view,commitEditingStyle:editing_style, forRowAtIndexPath:index_path)
+    if editing_style == UITableViewCellEditingStyleDelete
+      delete_task_at_index(index_path.row)
+      if Task.any?
+        tableView.deleteRowsAtIndexPaths([index_path], 
+          withRowAnimation: UITableViewRowAnimationFade)
+      else
+        tableView.reloadRowsAtIndexPaths([index_path], 
+          withRowAnimation: UITableViewRowAnimationFade)      
+      end
+    end
+  end
+  
   # =========================
   # = UITableViewDataSource =
   # =========================
@@ -102,6 +119,13 @@ class TasksViewController < UITableViewController
   def create_new_task(attributes)
     Task.create(attributes) 
     cdq.save
+  end
+  
+  def delete_task_at_index(index)
+    task = Task.all[index]
+    task.destroy
+    cdq.save
+    Task.reset_current
   end
   
 end
