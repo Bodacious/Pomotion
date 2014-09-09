@@ -10,6 +10,8 @@ class MainViewController < UIViewController
   def viewDidLoad
     super
     self.title = "Pomotion"
+    self.navigationItem.rightBarButtonItem = tasks_button
+    
     Pomodoro.today.each do |pomodoro|
       view.add_pomodoro_view if pomodoro.complete?
     end
@@ -26,6 +28,16 @@ class MainViewController < UIViewController
   def timer_button
     view.timer_button
   end
+  
+  def tasks_button
+    @tasks_button ||= UIBarButtonItem.alloc.initWithImage(tasks_image, 
+      style: UIBarButtonItemStylePlain, target: self, action: 'tasks_button_tapped:')
+  end
+  
+  def tasks_image
+    @tasks_image ||= UIImage.imageNamed('todo.png')
+  end
+  
     
   def alert_view
     @alert_view ||= UIAlertView.alloc.initWithTitle("Pomodoro Complete!", 
@@ -36,6 +48,11 @@ class MainViewController < UIViewController
   # ===========
   # = Actions =
   # ===========
+  
+  def tasks_button_tapped(sender)
+    tasks_controller = TasksViewController.alloc.initWithNibName(nil, bundle: nil)
+    navigationController.pushViewController(tasks_controller, animated: true)  
+  end
   
   def timer_button_tapped(sender)
     if pomodoro_timer && pomodoro_timer.valid?

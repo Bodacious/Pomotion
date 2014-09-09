@@ -37,11 +37,14 @@
 
 navigation-bar {
   background-color: #7F0000;
+  color: white;
+  -ios-tint-color: white;
 }
 
 navigation-bar title {
   color: white;
 }
+
 .pomodoro_view {
   width: 24px;
   height: 24px;
