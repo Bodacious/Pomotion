@@ -17,9 +17,18 @@ class MainViewController < UIViewController
     end
   end
   
+  def viewDidAppear(animated)
+    super
+    set_task_name_label_from_current_task
+  end
+  
   # ==============
   # = Properties =
   # ==============
+  
+  def task_name_label
+    view.task_name_label
+  end
   
   def timer_label
     view.timer_label
@@ -117,5 +126,15 @@ class MainViewController < UIViewController
     pomodoro_timer.delegate = self
     pomodoro_timer.start
   end
+  
+  def set_task_name_label_from_current_task
+    if Task.current
+      task_name_label_text = Task.current.name
+    else
+      task_name_label_text = MainView::TASK_NAME_LABEL_DEFAULT_TEXT
+    end
+    task_name_label.text = task_name_label_text
+  end
+
   
 end

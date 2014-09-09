@@ -5,6 +5,7 @@ class MainView < UIView
   TIMER_BUTTON_LABEL_SELECTED_TITLE = "Interrupt!"  
   
   TASK_NAME_LABEL_DEFAULT_TEXT = 'n/a'
+
   
   def initWithFrame(frame)
     super.tap do
