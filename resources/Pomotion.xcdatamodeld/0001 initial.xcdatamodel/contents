@@ -3,5 +3,12 @@
   <entity name="Pomodoro" syncable="YES" representedClassName="Pomodoro">
     <attribute optional="NO" syncable="YES" attributeType="Date" name="started_at"/>
     <attribute optional="YES" syncable="YES" attributeType="Date" name="finished_at"/>
+    <relationship optional="YES" deletionRule="Nullify" syncable="YES" name="task" inverseEntity="Task" destinationEntity="Task" inverseName="pomodoros" maxCount="1"/>
+  </entity>
+  <entity name="Task" syncable="YES" representedClassName="Task">
+    <attribute optional="NO" syncable="YES" attributeType="String" name="name"/>
+    <attribute optional="NO" syncable="YES" attributeType="Boolean" name="current" defaultValueString="NO"/>
+    <attribute optional="NO" syncable="YES" attributeType="Boolean" name="complete" defaultValueString="NO"/>
+    <relationship optional="YES" deletionRule="Nullify" syncable="YES" name="pomodoros" inverseEntity="Pomodoro" destinationEntity="Pomodoro" inverseName="task" toMany="YES"/>
   </entity>
 </model>
