@@ -1,19 +1,14 @@
-class TimerColor
-  
-  attr_reader :timer_count
-  
-  def initialize(timer_count)
-    @timer_count = timer_count.to_i
-  end
-  
+class TimerColor < Struct.new(:timer_count)
+    
   def color
-    if timer_count > 0
-      UIColor.new_from_two_colors(UIColor.pomo_red_color, UIColor.pomo_green_color, 
-        proportion)
-    else
-      UIColor.pomo_grey_color
-    end    
+    return UIColor.pomo_grey_color unless timer_count > 0
+    UIColor.new_from_two_colors(UIColor.pomo_red_color, UIColor.pomo_green_color, 
+      proportion)
   end  
+  
+
+  private
+
   
   def proportion
     Rational(timer_count, Time.secsIn25Mins).to_f.round(2)
