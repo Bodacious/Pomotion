@@ -78,7 +78,6 @@ class MainViewController < UIViewController
   
   def alertView(alertView, didDismissWithButtonIndex: button_index)
     view.add_pomodoro_view
-    Pomodoro.finish_current_and_reset
     timer_button.selected = false    
   end
   
@@ -112,7 +111,7 @@ class MainViewController < UIViewController
   
   
   def create_new_pomodoro
-    Pomodoro.current = Pomodoro.create(started_at: Time.now)
+    Pomodoro.current = Pomodoro.create(started_at: Time.now, task: Task.current)
     cdq.save
   end
   

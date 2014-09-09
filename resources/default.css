@@ -115,6 +115,66 @@ navigation-bar title {
   left: 235px;
 } 
 
+.task_cell .pomodoro_view:nth-of-type(1) {
+  top: 48px;
+  left: 15px;
+}
+.task_cell .pomodoro_view:nth-of-type(2) {
+  top: 48px;
+  left: 40px;
+}
+.task_cell .pomodoro_view:nth-of-type(3) {
+  top: 48px;
+  left: 65px;
+}
+.task_cell .pomodoro_view:nth-of-type(4) {
+  top: 48px;
+  left: 90px;
+}
+.task_cell .pomodoro_view:nth-of-type(5) {
+  top: 48px;
+  left: 115px;
+}
+.task_cell .pomodoro_view:nth-of-type(6) {
+  top: 48px;
+  left: 140px;
+}
+.task_cell .pomodoro_view:nth-of-type(7) {
+  top: 48px;
+  left: 165px;
+}
+.task_cell .pomodoro_view:nth-of-type(8) {
+  top: 48px;
+  left: 190px;
+}
+.task_cell .pomodoro_view:nth-of-type(9) {
+  top: 48px;
+  left: 215px;
+}
+.task_cell .pomodoro_view:nth-of-type(10) {
+  top: 48px;
+  left: 240px;
+}
+.task_cell .pomodoro_view:nth-of-type(11) {
+  top: 48px;
+  left: 265px;
+}
+.task_cell .pomodoro_view:nth-of-type(12) {
+  top: 48px;
+  left: 290px;
+}
+
+/*
+  Hide these - they're too wide for the cell!
+  One should never have more than a few pomodoros per task anyway
+*/
+.task_cell .pomodoro_view:nth-of-type(13),
+.task_cell .pomodoro_view:nth-of-type(14),
+.task_cell .pomodoro_view:nth-of-type(15),
+.task_cell .pomodoro_view:nth-of-type(16) {
+  background-color: transparent;
+}
+
 .empty_label {
   top: 200px;  
   left: 0;
