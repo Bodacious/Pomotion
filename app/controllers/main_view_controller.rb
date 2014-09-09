@@ -11,10 +11,7 @@ class MainViewController < UIViewController
     super
     self.title = "Pomotion"
     self.navigationItem.rightBarButtonItem = tasks_button
-    
-    Pomodoro.today.each do |pomodoro|
-      view.add_pomodoro_view if pomodoro.complete?
-    end
+    add_pomodoro_views
   end
   
   def viewDidAppear(animated)
@@ -134,6 +131,11 @@ class MainViewController < UIViewController
     end
     task_name_label.text = task_name_label_text
   end
-
   
+  def add_pomodoro_views
+    Pomodoro.today.each do |pomodoro|
+      view.add_pomodoro_view if pomodoro.complete?
+    end
+  end
+
 end
