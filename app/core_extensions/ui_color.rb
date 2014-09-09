@@ -30,7 +30,6 @@ class UIColor
     new_blue  = color_1_b.value + (color_2_b.value - color_1_b.value) * proportion
     new_alpha = color_1_a.value + (color_2_a.value - color_1_a.value) * proportion
     
-    # In our case, alpha is always 1.0
     UIColor.colorWithRed(new_red, green: new_green, blue: new_blue, alpha: new_alpha)
   end
 

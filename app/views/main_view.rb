@@ -29,7 +29,7 @@ class MainView < UIView
   end
   
   def timer_button
-    @timer_button ||= UIButton.buttonWithType(UIButtonTypeCustom).tap do |button|
+    @timer_button ||= TimerButton.buttonWithType(UIButtonTypeCustom).tap do |button|
       button.styleId = 'timer_button'
       button.setTitle(TIMER_BUTTON_LABEL_NORMAL_TITLE, forState: UIControlStateNormal)
       button.setTitle(TIMER_BUTTON_LABEL_SELECTED_TITLE, forState: UIControlStateSelected)

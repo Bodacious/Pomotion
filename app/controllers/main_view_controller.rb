@@ -22,6 +22,10 @@ class MainViewController < UIViewController
   def timer_label
     view.timer_label
   end
+  
+  def timer_button
+    view.timer_button
+  end
     
   # ===========
   # = Actions =
@@ -43,11 +47,12 @@ class MainViewController < UIViewController
   
   def pomodoro_timer_did_start(pomodoro_timer)
     update_timer_label
+    timer_button.selected = true
   end
     
   def pomodoro_timer_did_invalidate(pomodoro_timer)
     update_timer_label
-    NSLog("pomodoro_timer_did_invalidate")
+    timer_button.selected = false
   end
   
   def pomodoro_timer_did_decrement(pomodoro_timer)
@@ -57,7 +62,7 @@ class MainViewController < UIViewController
   def pomodoro_timer_did_finish(pomodoro_timer)
     view.add_pomodoro_view
     pomodoro_timer.invalidate
-    Pomodoro.finish_current_and_reset
+    Pomodoro.finish_current_and_reset    
   end
   
   
