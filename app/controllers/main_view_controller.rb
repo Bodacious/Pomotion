@@ -27,18 +27,33 @@ class MainViewController < UIViewController
     view.timer_button
   end
     
+  def alert_view
+    @alert_view ||= UIAlertView.alloc.initWithTitle("Pomodoro Complete!", 
+      message: "Time to take a short break.", delegate: self, 
+      cancelButtonTitle: "OK", otherButtonTitles: nil)
+  end
+  
   # ===========
   # = Actions =
   # ===========
   
   def timer_button_tapped(sender)
     if pomodoro_timer && pomodoro_timer.valid?
-      Pomodoro.finish_current_and_reset
       pomodoro_timer.invalidate      
     else
       create_new_pomodoro
       start_new_pomodoro_timer
     end
+  end
+  
+  # =======================
+  # = UIAlertViewDelegate =
+  # =======================
+  
+  def alertView(alertView, didDismissWithButtonIndex: button_index)
+    view.add_pomodoro_view
+    Pomodoro.finish_current_and_reset
+    timer_button.selected = false    
   end
   
   # =========================
@@ -53,6 +68,7 @@ class MainViewController < UIViewController
   def pomodoro_timer_did_invalidate(pomodoro_timer)
     update_timer_label
     timer_button.selected = false
+    Pomodoro.finish_current_and_reset
   end
   
   def pomodoro_timer_did_decrement(pomodoro_timer)
@@ -62,7 +78,7 @@ class MainViewController < UIViewController
   def pomodoro_timer_did_finish(pomodoro_timer)
     view.add_pomodoro_view
     pomodoro_timer.invalidate
-    Pomodoro.finish_current_and_reset    
+    alert_view.show       
   end
   
   
@@ -84,4 +100,5 @@ class MainViewController < UIViewController
     pomodoro_timer.delegate = self
     pomodoro_timer.start
   end
+  
 end
