@@ -5,7 +5,11 @@ class MainViewController < UIViewController
   def loadView
     self.view = MainView.alloc.initWithFrame(CGRectZero)
   end
-  
+
+  def timer_label
+    view.timer_label
+  end
+    
   def timer_button
     view.timer_button
   end
@@ -19,26 +23,33 @@ class MainViewController < UIViewController
   end
   
   def pomodoro_timer_did_start(pomodoro_timer)
-    NSLog("pomodoro_timer_did_start")
     timer_button.selected = true
+    update_timer_label    
   end
  
   def pomodoro_timer_did_invalidate(pomodoro_timer)
-    NSLog("pomodoro_timer_did_invalidate")
     timer_button.selected = false  
+    update_timer_label    
   end
  
   def pomodoro_timer_did_decrement(pomodoro_timer)
-    NSLog("pomodoro_timer_did_decrement")
+    update_timer_label    
   end
  
   def pomodoro_timer_did_finish(pomodoro_timer)
-    NSLog("pomodoro_timer_did_finish")    
+    pomodoro_timer.invalidate
   end
+  
   
   private
   
   
+  def update_timer_label
+    mins = pomodoro_timer.count / 60
+    secs = pomodoro_timer.count % 60
+    timer_label.text = "%02d:%02d" % [mins, secs]
+  end
+    
   def start_new_pomodoro_timer
     self.pomodoro_timer = PomodoroTimer.new
     pomodoro_timer.delegate = self
