@@ -14,6 +14,10 @@ class PomodoroTimer
     @delegate = WeakRef.new(object)
   end
  
+  def valid?
+    ns_timer && ns_timer.valid?
+  end
+  
   def start
     invalidate if ns_timer
     self.ns_timer = NSTimer.timerWithTimeInterval(1, target: self, selector: 'decrement', userInfo: nil, repeats: true)
