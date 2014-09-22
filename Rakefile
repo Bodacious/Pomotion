@@ -13,4 +13,6 @@ Motion::Project::App.setup do |app|
   app.name = 'Pomotion'
   app.pixatefreestyle.framework = 'vendor/PixateFreestyle.framework'
   
+  app.vendor_project('vendor/NSDate+SecsIn25Mins', :static)
+  
 end

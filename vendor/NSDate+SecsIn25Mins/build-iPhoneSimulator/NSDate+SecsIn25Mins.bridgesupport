@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name='NSDate'>
+<method class_method='true' selector='secsIn25Mins'>
+<retval declared_type='int' type='i'/>
+</method>
+</class>
+</signatures>
