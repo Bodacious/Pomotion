@@ -1,14 +1,12 @@
 class AppDelegate
   
-  def hello_world_label
-    @hello_world_label ||= begin
-      frame = CGRectMake(20,200,280,40)
-      label           = UILabel.alloc.initWithFrame(frame)
-      label.text      = "Hello world"
-      label.textColor = UIColor.whiteColor
-      label.textAlignment = UITextAlignmentCenter
-      label
-    end
+  def main_view_controller
+    @main_view_controller ||= MainViewController.alloc.initWithNibName(nil, bundle: nil)
+  end
+  
+  def navigation_controller
+    @navigation_controller ||= UINavigationController.alloc.
+      initWithRootViewController(main_view_controller)
   end
  
   def window
@@ -16,8 +14,9 @@ class AppDelegate
   end
   
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    window.addSubview(hello_world_label)
-     window.makeKeyAndVisible    
+    window.rootViewController = navigation_controller
+    window.makeKeyAndVisible
     true
   end
+  
 end
