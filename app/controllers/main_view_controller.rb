@@ -4,6 +4,7 @@ class MainViewController < UIViewController
   
   def loadView
     self.view = MainView.alloc.initWithFrame(CGRectZero)
+    self.title = "Pomotion"    
   end
 
   def timer_label
@@ -45,9 +46,7 @@ class MainViewController < UIViewController
   
   
   def update_timer_label
-    mins = pomodoro_timer.count / 60
-    secs = pomodoro_timer.count % 60
-    timer_label.text = "%02d:%02d" % [mins, secs]
+    timer_label.update_for_count(pomodoro_timer.count)
   end
     
   def start_new_pomodoro_timer

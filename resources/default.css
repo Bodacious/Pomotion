@@ -18,3 +18,9 @@
   color: white;
   background-color: #007F00;
 }
+navigation-bar {
+  background-color: #7F0000;
+}
+navigation-bar title {
+  color: white;
+}

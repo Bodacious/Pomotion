@@ -9,7 +9,7 @@ class MainView < UIView
   end
     
   def timer_label
-    @timer_label ||= UILabel.alloc.initWithFrame(CGRectZero).tap do |label|
+    @timer_label ||= TimerLabel.alloc.initWithFrame(CGRectZero).tap do |label|
       label.styleId = 'timer_label'
       label.text    = '00:00'
     end
