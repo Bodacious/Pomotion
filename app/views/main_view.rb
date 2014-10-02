@@ -16,7 +16,7 @@ class MainView < UIView
   end
   
   def timer_button
-    @timer_button ||= UIButton.buttonWithType(UIButtonTypeCustom).tap do |button|
+    @timer_button ||= SelectableButton.buttonWithType(UIButtonTypeCustom).tap do |button|
       button.styleId = 'timer_button'
       button.setTitle('Start Timer', forState: UIControlStateNormal)
       button.setTitle("Interrupt!" , forState: UIControlStateSelected)
