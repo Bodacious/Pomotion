@@ -2,6 +2,8 @@
 
 This code is the example project you'll build in the tutorial **An Introduction To Rubymotion**
 
+Full documentation available in [doc/index.html](doc/index.html).
+
 ## Using This Repository
 
 The latest commit is the app fully documented and ready to roll!

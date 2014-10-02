@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: AppDelegate
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!AppDelegate.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (A)</a> &raquo;
+    
+    
+    <span class="title">AppDelegate</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: AppDelegate
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">AppDelegate</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/app_delegate.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The main AppDelegate for Pomotion</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#application-instance_method" title="#application (instance method)">- (Object) <strong>application</strong>(application, didFinishLaunchingWithOptions: launchOptions) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#main_view_controller-instance_method" title="#main_view_controller (instance method)">- (Object) <strong>main_view_controller</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The MainViewController object to display on screen when the app is loaded.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#navigation_controller-instance_method" title="#navigation_controller (instance method)">- (Object) <strong>navigation_controller</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A UINavigationController to display main_view_controller in.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#window-instance_method" title="#window (instance method)">- (Object) <strong>window</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The app&#39;s main UIWindow.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="application-instance_method">
+  
+    - (<tt>Object</tt>) <strong>application</strong>(application, didFinishLaunchingWithOptions: launchOptions) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/app_delegate.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_application'>application</span><span class='lparen'>(</span><span class='id identifier rubyid_application'>application</span><span class='comma'>,</span> <span class='label'>didFinishLaunchingWithOptions:</span><span class='id identifier rubyid_launchOptions'>launchOptions</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_window'>window</span><span class='period'>.</span><span class='id identifier rubyid_rootViewController'>rootViewController</span> <span class='op'>=</span> <span class='id identifier rubyid_navigation_controller'>navigation_controller</span>
+  <span class='id identifier rubyid_window'>window</span><span class='period'>.</span><span class='id identifier rubyid_makeKeyAndVisible'>makeKeyAndVisible</span>
+  <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="main_view_controller-instance_method">
+  
+    - (<tt>Object</tt>) <strong>main_view_controller</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The MainViewController object to display on screen when the app is loaded.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/app_delegate.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_main_view_controller'>main_view_controller</span>
+  <span class='ivar'>@main_view_controller</span> <span class='op'>||=</span> <span class='const'>MainViewController</span><span class='period'>.</span><span class='id identifier rubyid_alloc'>alloc</span><span class='period'>.</span><span class='id identifier rubyid_initWithNibName'>initWithNibName</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>bundle:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="navigation_controller-instance_method">
+  
+    - (<tt>Object</tt>) <strong>navigation_controller</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A UINavigationController to display main_view_controller in.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/app_delegate.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_navigation_controller'>navigation_controller</span>
+  <span class='ivar'>@navigation_controller</span> <span class='op'>||=</span> <span class='const'>UINavigationController</span><span class='period'>.</span><span class='id identifier rubyid_alloc'>alloc</span><span class='period'>.</span>
+    <span class='id identifier rubyid_initWithRootViewController'>initWithRootViewController</span><span class='lparen'>(</span><span class='id identifier rubyid_main_view_controller'>main_view_controller</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="window-instance_method">
+  
+    - (<tt>Object</tt>) <strong>window</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The app&#39;s main UIWindow.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/app_delegate.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_window'>window</span>
+  <span class='ivar'>@window</span> <span class='op'>||=</span> <span class='const'>UIWindow</span><span class='period'>.</span><span class='id identifier rubyid_alloc'>alloc</span><span class='period'>.</span><span class='id identifier rubyid_initWithFrame'>initWithFrame</span><span class='lparen'>(</span><span class='const'>UIScreen</span><span class='period'>.</span><span class='id identifier rubyid_mainScreen'>mainScreen</span><span class='period'>.</span><span class='id identifier rubyid_bounds'>bounds</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  2 17:17:25 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

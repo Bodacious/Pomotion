@@ -3,20 +3,12 @@ class MainViewController < UIViewController
 
   # A PomodoroTimer instance used to count down the current pomodoro session
   attr_accessor :pomodoro_timer
-  
-  # =====================
-  # = Lifecycle Methods =
-  # =====================
-  
+    
   def loadView
     self.view = MainView.alloc.initWithFrame(CGRectZero)
     self.title = "Pomotion"    
   end
   
-  # ==============
-  # = Properties =
-  # ==============
- 
   # A UIAlertView to alert the User when their Pomodoro session is complete
   def alert_view
     @alert_view ||= UIAlertView.alloc.initWithTitle("Pomodoro Complete!", 
@@ -34,10 +26,6 @@ class MainViewController < UIViewController
     view.timer_button
   end
   
-  # ===========
-  # = Actions =
-  # ===========
-  
   # Called when the timer button is tapped. If there's a valid PomodoroTimer running,
   # invalidate it. Otherwise start a new PomodoroTimer.
   # 
@@ -49,10 +37,6 @@ class MainViewController < UIViewController
       start_new_pomodoro_timer
     end
   end
-  
-  # =========================
-  # = PomodoroTimerDelegate =
-  # =========================
   
   # Called when the PomodoroTimer is started.
   # 

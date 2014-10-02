@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: UIColor
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!UIColor.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (U)</a> &raquo;
+    
+    
+    <span class="title">UIColor</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: UIColor
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">UIColor</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/core_extensions/ui_color.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Extends the UIColor class with some extra singleton methods</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_from_two_colors-class_method" title="new_from_two_colors (class method)">+ (Object) <strong>new_from_two_colors</strong>(color_1, color_2, proportion) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Merges two UIColors with a given proportion and returns a new UIColor.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pomo_green_color-class_method" title="pomo_green_color (class method)">+ (Object) <strong>pomo_green_color</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A helper method for the Green colour used within the app.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pomo_grey_color-class_method" title="pomo_grey_color (class method)">+ (Object) <strong>pomo_grey_color</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A helper method for the Grey colour used within the app.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pomo_red_color-class_method" title="pomo_red_color (class method)">+ (Object) <strong>pomo_red_color</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A helper method for the Red colour used within the app.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="new_from_two_colors-class_method">
+  
+    + (<tt>Object</tt>) <strong>new_from_two_colors</strong>(color_1, color_2, proportion) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Merges two UIColors with a given proportion and returns a new UIColor.</p>
+
+<p>color_1 - The first UIColor to merge color_2 - The second UIColor to merge
+proportion - The a Float representing the proportion of color_2 to merge
+into color_1</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-constant">UIColor</span>.<span class="ruby-identifier">new_from_two_colors</span>(<span class="ruby-ivar">@color_1</span>, <span class="ruby-ivar">@color_2</span>, <span class="ruby-value">0.4</span>)
+<span class="ruby-comment"># =&gt; UIColor that&#39;s 60% @color_1 and 40% @color_2</span>
+</pre>
+
+<p>Returns a UIColor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/core_extensions/ui_color.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new_from_two_colors'>new_from_two_colors</span><span class='lparen'>(</span><span class='id identifier rubyid_color_1'>color_1</span><span class='comma'>,</span> <span class='id identifier rubyid_color_2'>color_2</span><span class='comma'>,</span> <span class='id identifier rubyid_proportion'>proportion</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_1_r'>color_1_r</span> <span class='op'>=</span> <span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:float</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_1_g'>color_1_g</span> <span class='op'>=</span> <span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:float</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_1_b'>color_1_b</span> <span class='op'>=</span> <span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:float</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_1_a'>color_1_a</span> <span class='op'>=</span> <span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:float</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_1'>color_1</span><span class='period'>.</span><span class='id identifier rubyid_getRed'>getRed</span><span class='lparen'>(</span><span class='id identifier rubyid_color_1_r'>color_1_r</span><span class='comma'>,</span> <span class='label'>green:</span> <span class='id identifier rubyid_color_1_g'>color_1_g</span><span class='comma'>,</span> <span class='label'>blue:</span> <span class='id identifier rubyid_color_1_b'>color_1_b</span><span class='comma'>,</span> <span class='label'>alpha:</span> <span class='id identifier rubyid_color_1_a'>color_1_a</span><span class='rparen'>)</span>
+ 
+  <span class='id identifier rubyid_color_2_r'>color_2_r</span> <span class='op'>=</span> <span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:float</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_2_g'>color_2_g</span> <span class='op'>=</span> <span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:float</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_2_b'>color_2_b</span> <span class='op'>=</span> <span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:float</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_2_a'>color_2_a</span> <span class='op'>=</span> <span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:float</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_color_2'>color_2</span><span class='period'>.</span><span class='id identifier rubyid_getRed'>getRed</span><span class='lparen'>(</span><span class='id identifier rubyid_color_2_r'>color_2_r</span><span class='comma'>,</span> <span class='label'>green:</span> <span class='id identifier rubyid_color_2_g'>color_2_g</span><span class='comma'>,</span> <span class='label'>blue:</span> <span class='id identifier rubyid_color_2_b'>color_2_b</span><span class='comma'>,</span> <span class='label'>alpha:</span> <span class='id identifier rubyid_color_2_a'>color_2_a</span><span class='rparen'>)</span>
+ 
+  <span class='id identifier rubyid_new_red'>new_red</span>   <span class='op'>=</span> <span class='id identifier rubyid_color_1_r'>color_1_r</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_color_2_r'>color_2_r</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>-</span> <span class='id identifier rubyid_color_1_r'>color_1_r</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_proportion'>proportion</span>
+  <span class='id identifier rubyid_new_green'>new_green</span> <span class='op'>=</span> <span class='id identifier rubyid_color_1_g'>color_1_g</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_color_2_g'>color_2_g</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>-</span> <span class='id identifier rubyid_color_1_g'>color_1_g</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_proportion'>proportion</span>
+  <span class='id identifier rubyid_new_blue'>new_blue</span>  <span class='op'>=</span> <span class='id identifier rubyid_color_1_b'>color_1_b</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_color_2_b'>color_2_b</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>-</span> <span class='id identifier rubyid_color_1_b'>color_1_b</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_proportion'>proportion</span>
+  <span class='id identifier rubyid_new_alpha'>new_alpha</span> <span class='op'>=</span> <span class='id identifier rubyid_color_1_a'>color_1_a</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_color_2_a'>color_2_a</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>-</span> <span class='id identifier rubyid_color_1_a'>color_1_a</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_proportion'>proportion</span>
+ 
+  <span class='const'>UIColor</span><span class='period'>.</span><span class='id identifier rubyid_colorWithRed'>colorWithRed</span><span class='lparen'>(</span><span class='id identifier rubyid_new_red'>new_red</span><span class='comma'>,</span> <span class='label'>green:</span> <span class='id identifier rubyid_new_green'>new_green</span><span class='comma'>,</span> <span class='label'>blue:</span> <span class='id identifier rubyid_new_blue'>new_blue</span><span class='comma'>,</span> <span class='label'>alpha:</span> <span class='id identifier rubyid_new_alpha'>new_alpha</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pomo_green_color-class_method">
+  
+    + (<tt>Object</tt>) <strong>pomo_green_color</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A helper method for the Green colour used within the app.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/core_extensions/ui_color.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pomo_green_color'>pomo_green_color</span>
+  <span class='ivar'>@pomo_green_color</span> <span class='op'>||=</span> <span class='const'>UIColor</span><span class='period'>.</span><span class='id identifier rubyid_colorWithRed'>colorWithRed</span><span class='lparen'>(</span><span class='float'>0.0</span><span class='comma'>,</span> <span class='label'>green:</span> <span class='float'>0.666</span><span class='comma'>,</span> <span class='label'>blue:</span> <span class='float'>0.0</span><span class='comma'>,</span> <span class='label'>alpha:</span> <span class='float'>1.0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pomo_grey_color-class_method">
+  
+    + (<tt>Object</tt>) <strong>pomo_grey_color</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A helper method for the Grey colour used within the app.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/core_extensions/ui_color.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pomo_grey_color'>pomo_grey_color</span>
+  <span class='ivar'>@pomo_grey_color</span> <span class='op'>||=</span> <span class='const'>UIColor</span><span class='period'>.</span><span class='id identifier rubyid_colorWithRed'>colorWithRed</span><span class='lparen'>(</span><span class='float'>0.5</span><span class='comma'>,</span> <span class='label'>green:</span> <span class='float'>0.5</span><span class='comma'>,</span> <span class='label'>blue:</span> <span class='float'>0.5</span><span class='comma'>,</span> <span class='label'>alpha:</span> <span class='float'>1.0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pomo_red_color-class_method">
+  
+    + (<tt>Object</tt>) <strong>pomo_red_color</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A helper method for the Red colour used within the app.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/core_extensions/ui_color.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pomo_red_color'>pomo_red_color</span>
+  <span class='ivar'>@pomo_red_color</span> <span class='op'>||=</span> <span class='const'>UIColor</span><span class='period'>.</span><span class='id identifier rubyid_colorWithRed'>colorWithRed</span><span class='lparen'>(</span><span class='float'>0.666</span><span class='comma'>,</span> <span class='label'>green:</span> <span class='float'>0.0</span><span class='comma'>,</span> <span class='label'>blue:</span> <span class='float'>0.0</span><span class='comma'>,</span> <span class='label'>alpha:</span> <span class='float'>1.0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  2 17:17:25 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

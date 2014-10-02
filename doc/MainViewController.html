@@ -1,0 +1,834 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: MainViewController
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!MainViewController.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (M)</a> &raquo;
+    
+    
+    <span class="title">MainViewController</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: MainViewController
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">UIViewController</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">UIViewController</li>
+          
+            <li class="next">MainViewController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/controllers/main_view_controller.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The Main View Controller for this application</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pomodoro_timer-instance_method" title="#pomodoro_timer (instance method)">- (Object) <strong>pomodoro_timer</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A PomodoroTimer instance used to count down the current pomodoro session.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#alert_view-instance_method" title="#alert_view (instance method)">- (Object) <strong>alert_view</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A UIAlertView to alert the User when their Pomodoro session is complete.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loadView-instance_method" title="#loadView (instance method)">- (Object) <strong>loadView</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pomodoro_timer_did_decrement-instance_method" title="#pomodoro_timer_did_decrement (instance method)">- (Object) <strong>pomodoro_timer_did_decrement</strong>(pomodoro_timer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Called when the PomodoroTimer is decremented.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pomodoro_timer_did_finish-instance_method" title="#pomodoro_timer_did_finish (instance method)">- (Object) <strong>pomodoro_timer_did_finish</strong>(pomodoro_timer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Called when the PomodoroTimer is finished.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pomodoro_timer_did_invalidate-instance_method" title="#pomodoro_timer_did_invalidate (instance method)">- (Object) <strong>pomodoro_timer_did_invalidate</strong>(pomodoro_timer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Called when the PomodoroTimer is invalidated.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pomodoro_timer_did_start-instance_method" title="#pomodoro_timer_did_start (instance method)">- (Object) <strong>pomodoro_timer_did_start</strong>(pomodoro_timer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Called when the PomodoroTimer is started.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#timer_button-instance_method" title="#timer_button (instance method)">- (Object) <strong>timer_button</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A helper method to access view&#39;s timer_button.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#timer_button_tapped-instance_method" title="#timer_button_tapped (instance method)">- (Object) <strong>timer_button_tapped</strong>(sender) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Called when the timer button is tapped.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#timer_label-instance_method" title="#timer_label (instance method)">- (Object) <strong>timer_label</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A helper method to access view&#39;s timer_label.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="pomodoro_timer=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="pomodoro_timer-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pomodoro_timer</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A PomodoroTimer instance used to count down the current pomodoro session</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span>
+  <span class='ivar'>@pomodoro_timer</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="alert_view-instance_method">
+  
+    - (<tt>Object</tt>) <strong>alert_view</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A UIAlertView to alert the User when their Pomodoro session is complete</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_alert_view'>alert_view</span>
+  <span class='ivar'>@alert_view</span> <span class='op'>||=</span> <span class='const'>UIAlertView</span><span class='period'>.</span><span class='id identifier rubyid_alloc'>alloc</span><span class='period'>.</span><span class='id identifier rubyid_initWithTitle'>initWithTitle</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pomodoro Complete!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> 
+    <span class='label'>message:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Time to take a short break.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>delegate:</span> <span class='kw'>self</span><span class='comma'>,</span> 
+    <span class='label'>cancelButtonTitle:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OK</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>otherButtonTitles:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loadView-instance_method">
+  
+    - (<tt>Object</tt>) <strong>loadView</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_loadView'>loadView</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_view'>view</span> <span class='op'>=</span> <span class='const'>MainView</span><span class='period'>.</span><span class='id identifier rubyid_alloc'>alloc</span><span class='period'>.</span><span class='id identifier rubyid_initWithFrame'>initWithFrame</span><span class='lparen'>(</span><span class='const'>CGRectZero</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pomotion</span><span class='tstring_end'>&quot;</span></span>    
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pomodoro_timer_did_decrement-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pomodoro_timer_did_decrement</strong>(pomodoro_timer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Called when the PomodoroTimer is decremented</p>
+
+<p>pomodoro_timer - The PomodoroTimer object that just decremented</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pomodoro_timer_did_decrement'>pomodoro_timer_did_decrement</span><span class='lparen'>(</span><span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_update_timer_label'>update_timer_label</span>    
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pomodoro_timer_did_finish-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pomodoro_timer_did_finish</strong>(pomodoro_timer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Called when the PomodoroTimer is finished</p>
+
+<p>pomodoro_timer - The PomodoroTimer object that just finished</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pomodoro_timer_did_finish'>pomodoro_timer_did_finish</span><span class='lparen'>(</span><span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span><span class='period'>.</span><span class='id identifier rubyid_invalidate'>invalidate</span>
+  <span class='id identifier rubyid_alert_view'>alert_view</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span>    
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pomodoro_timer_did_invalidate-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pomodoro_timer_did_invalidate</strong>(pomodoro_timer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Called when the PomodoroTimer is invalidated</p>
+
+<p>pomodoro_timer - The PomodoroTimer object that just invalidated</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pomodoro_timer_did_invalidate'>pomodoro_timer_did_invalidate</span><span class='lparen'>(</span><span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_timer_button'>timer_button</span><span class='period'>.</span><span class='id identifier rubyid_selected'>selected</span> <span class='op'>=</span> <span class='kw'>false</span>  
+  <span class='id identifier rubyid_update_timer_label'>update_timer_label</span>    
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pomodoro_timer_did_start-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pomodoro_timer_did_start</strong>(pomodoro_timer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Called when the PomodoroTimer is started.</p>
+
+<p>pomodoro_timer - The PomodoroTimer object that just started</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pomodoro_timer_did_start'>pomodoro_timer_did_start</span><span class='lparen'>(</span><span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_timer_button'>timer_button</span><span class='period'>.</span><span class='id identifier rubyid_selected'>selected</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_update_timer_label'>update_timer_label</span>    
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="timer_button-instance_method">
+  
+    - (<tt>Object</tt>) <strong>timer_button</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A helper method to access view&#39;s timer_button</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_timer_button'>timer_button</span>
+  <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_timer_button'>timer_button</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="timer_button_tapped-instance_method">
+  
+    - (<tt>Object</tt>) <strong>timer_button_tapped</strong>(sender) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Called when the timer button is tapped. If there&#39;s a valid
+PomodoroTimer running, invalidate it. Otherwise start a new PomodoroTimer.</p>
+
+<p>sender - The object that called this action</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_timer_button_tapped'>timer_button_tapped</span><span class='lparen'>(</span><span class='id identifier rubyid_sender'>sender</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
+    <span class='id identifier rubyid_pomodoro_timer'>pomodoro_timer</span><span class='period'>.</span><span class='id identifier rubyid_invalidate'>invalidate</span>      
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_start_new_pomodoro_timer'>start_new_pomodoro_timer</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="timer_label-instance_method">
+  
+    - (<tt>Object</tt>) <strong>timer_label</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A helper method to access view&#39;s timer_label</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/main_view_controller.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_timer_label'>timer_label</span>
+  <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_timer_label'>timer_label</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  2 17:17:25 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>
