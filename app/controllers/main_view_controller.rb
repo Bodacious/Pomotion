@@ -6,6 +6,12 @@ class MainViewController < UIViewController
     self.view = MainView.alloc.initWithFrame(CGRectZero)
     self.title = "Pomotion"    
   end
+ 
+  def alert_view
+    @alert_view ||= UIAlertView.alloc.initWithTitle("Pomodoro Complete!", 
+      message: "Time to take a short break.", delegate: self, 
+      cancelButtonTitle: "OK", otherButtonTitles: nil)
+  end
 
   def timer_label
     view.timer_label
@@ -39,6 +45,7 @@ class MainViewController < UIViewController
  
   def pomodoro_timer_did_finish(pomodoro_timer)
     pomodoro_timer.invalidate
+    alert_view.show    
   end
   
   
