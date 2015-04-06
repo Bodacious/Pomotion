@@ -26,3 +26,13 @@ navigation-bar {
 navigation-bar title {
   color: white;
 }
+
+.empty_cell label {
+  top: 200px;  
+  left: 0;  
+  width: 320px;
+  height: 30px;
+  font-size: 18px;
+  color: #AAAAAA;
+  text-align: center;
+}
