@@ -37,6 +37,24 @@ class TasksViewController < UITableViewController
     navigationController.popViewControllerAnimated(true)
   end
   
+  def tableView(table_view, canEditRowAtIndexPath: index_path)
+    true
+  end  
+ 
+  def tableView(table_view, commitEditingStyle:editing_style, forRowAtIndexPath: index_path)
+    case editing_style
+    when UITableViewCellEditingStyleDelete
+      delete_task_at_index(index_path.row)
+      if todays_tasks.any?
+        tableView.deleteRowsAtIndexPaths([index_path], 
+          withRowAnimation: UITableViewRowAnimationFade)
+      else
+        tableView.reloadRowsAtIndexPaths([index_path], 
+          withRowAnimation: UITableViewRowAnimationFade)      
+      end
+    end
+  end
+  
   # = UITableViewDataSource =
  
   def tableView(table_view, cellForRowAtIndexPath: index_path)
@@ -53,6 +71,7 @@ class TasksViewController < UITableViewController
   def tableView(table_view, numberOfRowsInSection: section)
     [1, todays_tasks.count].max
   end
+ 
  
   # = UIAlertViewDelegate =
   
@@ -76,6 +95,13 @@ class TasksViewController < UITableViewController
  
   def todays_tasks
     Task.all
+  end
+  
+  def delete_task_at_index(index)
+    task = todays_tasks[index]
+    task.destroy
+    Task.save
+    Task.reset_current
   end
   
 end
