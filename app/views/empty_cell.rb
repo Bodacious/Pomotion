@@ -1,0 +1,3 @@
+class EmptyCell < UITableViewCell
+  
+end
