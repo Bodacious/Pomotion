@@ -29,7 +29,7 @@ class MainViewController < UIViewController
   
   def tasks_button
     @tasks_button ||= UIBarButtonItem.alloc.initWithImage(tasks_image, 
-      style: UIBarButtonItemStylePlain, target: self, action: nil)
+      style: UIBarButtonItemStylePlain, target: self, action: 'tasks_button_tapped:')
   end
  
   def tasks_image
@@ -46,6 +46,11 @@ class MainViewController < UIViewController
     else
       start_new_pomodoro_timer
     end
+  end
+  
+  def tasks_button_tapped(sender)
+    tasks_controller = TasksViewController.alloc.initWithNibName(nil, bundle: nil)
+    navigationController.pushViewController(tasks_controller, animated: true)  
   end
   
   # Called when the PomodoroTimer is started.
