@@ -6,7 +6,8 @@ class MainViewController < UIViewController
     
   def loadView
     self.view = MainView.alloc.initWithFrame(CGRectZero)
-    self.title = "Pomotion"    
+    self.title = "Pomotion" 
+    self.navigationItem.rightBarButtonItem = tasks_button   
   end
   
   # A UIAlertView to alert the User when their Pomodoro session is complete
@@ -24,6 +25,15 @@ class MainViewController < UIViewController
   # A helper method to access view's timer_button
   def timer_button
     view.timer_button
+  end
+  
+  def tasks_button
+    @tasks_button ||= UIBarButtonItem.alloc.initWithImage(tasks_image, 
+      style: UIBarButtonItemStylePlain, target: self, action: nil)
+  end
+ 
+  def tasks_image
+    @tasks_image ||= UIImage.imageNamed('todo.png')
   end
   
   # Called when the timer button is tapped. If there's a valid PomodoroTimer running,

@@ -20,6 +20,8 @@
 }
 navigation-bar {
   background-color: #7F0000;
+  -ios-tint-color: white;
+  
 }
 navigation-bar title {
   color: white;
