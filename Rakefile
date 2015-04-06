@@ -16,3 +16,4 @@ Motion::Project::App.setup do |app|
   app.vendor_project('vendor/NSDate+SecsIn25Mins', :static)
   
 end
+task :"build:simulator" => :"schema:build"

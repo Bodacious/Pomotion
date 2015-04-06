@@ -1,6 +1,8 @@
 # The main AppDelegate for Pomotion
 class AppDelegate
   
+  include CDQ
+  
   # The MainViewController object to display on screen when the app is loaded.
   def main_view_controller
     @main_view_controller ||= MainViewController.alloc.initWithNibName(nil, bundle: nil)
@@ -18,6 +20,7 @@ class AppDelegate
   end
   
   def application(application, didFinishLaunchingWithOptions:launchOptions)
+    cdq.setup
     window.rootViewController = navigation_controller
     window.makeKeyAndVisible
     true
