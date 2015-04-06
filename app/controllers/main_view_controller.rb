@@ -6,8 +6,17 @@ class MainViewController < UIViewController
     
   def loadView
     self.view = MainView.alloc.initWithFrame(CGRectZero)
+  end
+  
+  def viewDidLoad
+    super
     self.title = "Pomotion" 
     self.navigationItem.rightBarButtonItem = tasks_button   
+  end
+  
+  def viewDidAppear(animated)
+    super
+    set_task_name_label_from_current_task
   end
   
   # A UIAlertView to alert the User when their Pomodoro session is complete
@@ -34,6 +43,10 @@ class MainViewController < UIViewController
  
   def tasks_image
     @tasks_image ||= UIImage.imageNamed('todo.png')
+  end
+  
+  def task_name_label
+    view.task_name_label
   end
   
   # Called when the timer button is tapped. If there's a valid PomodoroTimer running,
@@ -99,5 +112,15 @@ class MainViewController < UIViewController
     pomodoro_timer.delegate = self
     pomodoro_timer.start
   end
+  
+  def set_task_name_label_from_current_task
+    if Task.current
+      task_name_label_text = Task.current.name
+    else
+      task_name_label_text = "n/a"
+    end
+    task_name_label.text = task_name_label_text
+  end
+  
 
 end

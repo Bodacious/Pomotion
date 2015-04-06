@@ -4,6 +4,7 @@ class TasksViewController < UITableViewController
     super
     self.title = "Tasks"    
     tableView.registerClass(EmptyCell, forCellReuseIdentifier: EmptyCell.name)
+    tableView.registerClass(TaskCell, forCellReuseIdentifier: TaskCell.name)
     navigationItem.rightBarButtonItem = add_button    
   end
   
@@ -31,12 +32,24 @@ class TasksViewController < UITableViewController
     todays_tasks.any? ? 75.0 : tableView.frame.size.height
   end
  
+  def tableView(table_view, didSelectRowAtIndexPath: index_path)
+    Task.current = Task.all[index_path.row]
+    navigationController.popViewControllerAnimated(true)
+  end
+  
   # = UITableViewDataSource =
  
   def tableView(table_view, cellForRowAtIndexPath: index_path)
-    table_view.dequeueReusableCellWithIdentifier(EmptyCell.name)
+    if todays_tasks.any?
+      task = todays_tasks[index_path.row]
+      table_view.dequeueReusableCellWithIdentifier(TaskCell.name).tap do |cell|
+        cell.configure_for_task(task)
+      end
+    else
+      table_view.dequeueReusableCellWithIdentifier(EmptyCell.name)
+    end
   end
- 
+  
   def tableView(table_view, numberOfRowsInSection: section)
     [1, todays_tasks.count].max
   end

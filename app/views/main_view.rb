@@ -7,9 +7,18 @@ class MainView < UIView
       self.styleId = 'main_view'
       addSubview(timer_label)
       addSubview(timer_button)
+      addSubview(task_name_label)
+      
     end
   end
-    
+
+  def task_name_label
+    @task_name_label ||= UILabel.alloc.initWithFrame(CGRectZero).tap do |label|
+      label.styleClass = 'task_name_label'
+      label.text = "n/a"
+    end
+  end
+      
   # A TimerLabel used to show the current timer count on the screen
   def timer_label
     @timer_label ||= TimerLabel.alloc.initWithFrame(CGRectZero).tap do |label|
