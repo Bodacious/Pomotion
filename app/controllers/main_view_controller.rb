@@ -4,16 +4,22 @@ class MainViewController < UIViewController
   # A PomodoroTimer instance used to count down the current pomodoro session
   attr_accessor :pomodoro_timer
     
+  # Load an instance of MainView for this ViewController
   def loadView
     self.view = MainView.alloc.initWithFrame(CGRectZero)
   end
   
+  # Callback called once the view has finished loading.
   def viewDidLoad
     super
     self.title = "Pomotion" 
     self.navigationItem.rightBarButtonItem = tasks_button   
   end
   
+  # Callback called once the view has appeared.
+  #
+  # animated - A boolean value that indicates whether the view was added to the window
+  #            using an animation.
   def viewDidAppear(animated)
     super
     set_task_name_label_from_current_task
@@ -36,15 +42,18 @@ class MainViewController < UIViewController
     view.timer_button
   end
   
+  # Navigation bar button with todo list icon. Calls tasks_button_tapped: when tapped.
   def tasks_button
     @tasks_button ||= UIBarButtonItem.alloc.initWithImage(tasks_image, 
       style: UIBarButtonItemStylePlain, target: self, action: 'tasks_button_tapped:')
   end
- 
+
+  # Returns an instance of UIImage with image in resources/todo.png
   def tasks_image
     @tasks_image ||= UIImage.imageNamed('todo.png')
   end
   
+  # A UILabel in the MainView that displays the name of the current Task.
   def task_name_label
     view.task_name_label
   end
@@ -52,7 +61,7 @@ class MainViewController < UIViewController
   # Called when the timer button is tapped. If there's a valid PomodoroTimer running,
   # invalidate it. Otherwise start a new PomodoroTimer.
   # 
-  # sender - The object that called this action
+  # sender - The UIControl object that called this action
   def timer_button_tapped(sender)
     if pomodoro_timer && pomodoro_timer.valid?
       pomodoro_timer.invalidate      
@@ -61,6 +70,10 @@ class MainViewController < UIViewController
     end
   end
   
+  # Action called when the tasks_button is tapped. Creates a new instance of 
+  # TasksViewController and pushes it on the navigation controller.
+  #
+  # sender - The UIControl object that called this action.
   def tasks_button_tapped(sender)
     tasks_controller = TasksViewController.alloc.initWithNibName(nil, bundle: nil)
     navigationController.pushViewController(tasks_controller, animated: true)  
@@ -113,6 +126,8 @@ class MainViewController < UIViewController
     pomodoro_timer.start
   end
   
+  # Sets the value of the task_name_label's text property. If there's a current Task,
+  # sets it to the name of the Task, otherwise sets it to a placeholder String.
   def set_task_name_label_from_current_task
     if Task.current
       task_name_label_text = Task.current.name
@@ -121,6 +136,5 @@ class MainViewController < UIViewController
     end
     task_name_label.text = task_name_label_text
   end
-  
 
 end

@@ -7,11 +7,11 @@ class MainView < UIView
       self.styleId = 'main_view'
       addSubview(timer_label)
       addSubview(timer_button)
-      addSubview(task_name_label)
-      
+      addSubview(task_name_label)  
     end
   end
 
+  # A UILabel with the name of the current Task. Displays "n/a" by default
   def task_name_label
     @task_name_label ||= UILabel.alloc.initWithFrame(CGRectZero).tap do |label|
       label.styleClass = 'task_name_label'

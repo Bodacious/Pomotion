@@ -1,3 +1,4 @@
+# A UITableViewCell that's displayed when there are no Tasks
 class EmptyCell < UITableViewCell
   
   def initWithStyle(style, reuseIdentifier: reuseIdentifier)

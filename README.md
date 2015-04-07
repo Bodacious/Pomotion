@@ -12,4 +12,6 @@ You can jump to various sections of the tutorial using the `git checkout` comman
 
 Use `git log --graph --pretty=oneline --decorate` to see the full list of commits.
 
+If you're looking for the completed code for the Core Data tutorial, check out the **[CoreData](http://github.com/bodacious/pomotion/tree/coredata)** branch.
+
 If you're interested in developing an app in RubyMotion, [Katana Code are RubyMotion app developers](http://katanacode.com)
